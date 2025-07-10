@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Feed (No JS)</title>
+
+  <!-- Bootstrap 4.1.3 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="fa-brands fa-instagram mr-2"></i> Instagram
+    </a>
+    <div class="ml-auto d-flex align-items-center">
+      <button class="btn btn-success mr-3" data-toggle="modal" data-target="#createPostModal">Create a new post</button>
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="#">Accessibility</a>
+          <a class="dropdown-item" href="#">Privacy and Data</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item text-danger" href="#">Log out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- TOGGLE VIEW BUTTONS -->
+<div class="container mt-4 text-center">
+  <button class="btn btn-outline-secondary mr-2" onclick="document.getElementById('grid').classList.remove('d-none'); document.getElementById('single').classList.add('d-none');">
+    <i class="fa-solid fa-table-cells"></i>
+  </button>
+  <button class="btn btn-outline-secondary" onclick="document.getElementById('grid').classList.add('d-none'); document.getElementById('single').classList.remove('d-none');">
+    <i class="fa-solid fa-square"></i>
+  </button>
+</div>
+
+<!-- GRID VIEW -->
+<div class="container mt-4" id="grid">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?random=1" class="card-img-top" alt="Post image">
+        <div class="card-body">
+          <p class="card-text"><strong>user1</strong> Caption one.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?random=2" class="card-img-top" alt="Post image">
+        <div class="card-body">
+          <p class="card-text"><strong>user2</strong> Caption two.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?random=3" class="card-img-top" alt="Post image">
+        <div class="card-body">
+          <p class="card-text"><strong>user3</strong> Caption three.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?random=1" class="card-img-top" alt="Post image">
+        <div class="card-body">
+          <p class="card-text"><strong>user1</strong> Caption one.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?random=2" class="card-img-top" alt="Post image">
+        <div class="card-body">
+          <p class="card-text"><strong>user2</strong> Caption two.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?random=3" class="card-img-top" alt="Post image">
+        <div class="card-body">
+          <p class="card-text"><strong>user3</strong> Caption three.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?random=1" class="card-img-top" alt="Post image">
+        <div class="card-body">
+          <p class="card-text"><strong>user1</strong> Caption one.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?random=2" class="card-img-top" alt="Post image">
+        <div class="card-body">
+          <p class="card-text"><strong>user2</strong> Caption two.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?random=3" class="card-img-top" alt="Post image">
+        <div class="card-body">
+          <p class="card-text"><strong>user3</strong> Caption three.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SINGLE POST VIEW -->
+<div class="container mt-4 d-none" id="single">
+  <!-- Post 1 -->
+  <div class="card mb-4">
+    <div class="card-header d-flex justify-content-between">
+      <strong>My Crazy dog Spark!</strong>
+      <span>08/26</span>
+    </div>
+    <img src="https://picsum.photos/600/400?random=7" class="card-img-top" alt="Post image">
+    <div class="card-body">
+      <p class="card-text"><strong>204 Likes</strong></p>
+      <p>This is an example of a very good photo that you can post on Instagram.</p>
+    </div>
+  </div>
+
+  <!-- Post 2 -->
+  <div class="card mb-4">
+    <div class="card-header d-flex justify-content-between">
+      <strong>Beach Vibes</strong>
+      <span>08/20</span>
+    </div>
+    <img src="https://picsum.photos/600/400?random=8" class="card-img-top" alt="Post image">
+    <div class="card-body">
+      <p class="card-text"><strong>157 Likes</strong></p>
+      <p>A relaxing view from my last vacation.</p>
+    </div>
+  </div>
+
+  <!-- Post 3 -->
+  <div class="card mb-4">
+    <div class="card-header d-flex justify-content-between">
+      <strong>City Lights</strong>
+      <span>08/15</span>
+    </div>
+    <img src="https://picsum.photos/600/400?random=9" class="card-img-top" alt="Post image">
+    <div class="card-body">
+      <p class="card-text"><strong>305 Likes</strong></p>
+      <p>City at night from the top floor of my hotel.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CREATE POST MODAL -->
+<div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h5 class="modal-title" id="createPostModalLabel">Create a new post</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label for="caption">Caption:</label>
+          <textarea class="form-control mb-3" id="caption" placeholder="Add the caption of your post here"></textarea>
+          <div class="d-flex">
+            <button type="button" class="btn btn-outline-secondary mr-2">
+              <i class="fa-solid fa-camera"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Publish</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
